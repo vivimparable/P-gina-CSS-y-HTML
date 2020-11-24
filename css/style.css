@@ -1,0 +1,267 @@
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+}
+/* SE QUITAN TODOS LOS MARGENES POR DEFAULT*/
+
+body {
+    color: blanchedalmond;
+    background-color:black;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23fc3000' fill-opacity='0.1'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    /* lo último está sacado de font google*/
+}
+
+a {
+
+    color: blanchedalmond;
+    text-decoration: none;
+}
+/* text decoration modifica la linea de abajo*/
+
+ul {
+
+    list-style: none;
+}
+.container{
+
+    width: 80%;
+    margin: auto;
+} /*PARA CENTRAR CONTENIDO*/
+
+/* Navegación*/
+.nav-main{
+
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* alinea vertivalmente al centro
+    en la misma posicion todo*/
+    height: 60px;
+    padding: 20px 0;
+
+}
+
+.nav-brand{
+    width: 50px;
+}
+
+
+/*flex-box empieza con display flex y justify content space
+between para que se searen aprovechando todo el espacio disponible*/
+
+/* nav left*/
+.nav-main ul{
+display: flex;
+
+}
+.nav-main ul li{
+    padding: 10px;
+}
+
+ /* flex 1 no lo entiendo*/
+
+ .nav-main ul li a:hover{
+     border-bottom: 2px solid wheat;
+ }
+
+ /*showcase*/
+
+ .showcase{
+     margin-top: 10px;
+    width: 100%;
+    height: 500px;
+    background-image: url(/img/showcase2.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px 30px 20px;
+    text-align: center;
+
+ }
+
+ .showcase p{
+     margin-bottom: 10px;
+     margin-top: 30px;
+ }
+.btn{
+
+    cursor: pointer; /* aparecera el cursos como si fuera un botón*/
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: black;
+    color: burlywood;
+    font-size: 15px;
+    border: 1px solid white;
+
+}
+/*preguntar el display inline block*/
+
+.btn:hover{
+    opacity: .15;
+}
+
+/*news*/
+
+.news-cards img{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    
+}
+.news-cards{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+/* se puede hacer con repeat pero lo he puesto asi puesto que
+no sabia que se podia hacer asi también*/
+    column-gap: 20px;
+}
+
+.news-cards h3{
+
+    text-align: center;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.news-cards p{
+    text-align: justify;
+}
+.news-cards a{
+
+    padding:10px 0;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.news-cards a:hover{
+    text-decoration: underline;
+    
+}
+/*banner*/
+
+.cards-banner-one{
+    width: 100%;
+    background-image: url(/img/tech-red.jpg);
+    height: 330px;
+    background-position: center;
+    background-size: cover;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.cards-banner-one .content{
+    width: 40%;
+    padding: 90px 0 0 30px;
+    color: white;
+
+}
+
+.cards-banner-one p{
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/*banner two*/
+
+.cards-banner-two{
+
+background-image: url(/img/image-five.jpg);
+width: 100%;
+height: 300px;
+background-position: center center;
+background-size: cover;
+}
+.cards-banner-two .contaer{
+    width: 50%;
+    padding: 100px 0 0 30px;
+    margin-top: 25px;
+
+}
+/*redes sociales*/
+
+.social{
+    margin: 50px;
+    
+}
+.social p{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+
+}
+.links{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.links a{
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+.links a i{
+    font-size: 3rem;
+}
+
+/*footer*/
+
+.footer-links{
+
+    background-color: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+    
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* en el video se coloca el align items flex start pero
+    si no lo pongo se queda igual*/
+    justify-content: center;
+}
+.footer-container ul{ 
+    margin: 0 auto; /* no sporqué se centran automáticamente*/
+    font-size: 15px;
+    text-align: left; /*default*/
+}
+
+.footer-container h3{
+
+    margin-bottom: 15px;
+}
+
+.footer-container p:hover{
+    text-decoration: underline;
+}
+.footer-container h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.footer-end h4{
+
+text-align: center;
+margin-top: 50px;
+font-size: 13px;
+
+
+
+}
+
